@@ -8,6 +8,11 @@
   }
 }
 
+/* iOS Safari viewport height fix */
+:root {
+  --vh: 1vh;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -134,4 +139,13 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom utilities for iOS Safari height */
+.h-mobile-screen {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.h-mobile-section {
+  height: calc(var(--vh, 1vh) * 100 - 80px);
 }

@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-background">
       <div className="max-w-2xl text-center space-y-8">
-        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight md:pt-20">
+        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight md:pt-20 pt-30">
           👋 Hello, I'm Moeez
         </h1>
         
