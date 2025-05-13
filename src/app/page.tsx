@@ -15,7 +15,7 @@ const Main = () => {
 
   return (
     <div className='flex md:flex-row flex-col h-screen'>
-      <div className='md:basis-1/5 basis-1/10 md:rounded-r-2xl rounded-b-2xl bg-secondary'>
+      <div className='md:basis-1/5 basis-1/10 md:rounded-r-2xl md:rounded-bl-none rounded-b-2xl bg-secondary'>
         <NavBar />
       </div>
       <div className='md:basis-4/5 basis-9/10 content min-width-full flex flex-col overflow-y-scroll scroll-smooth snap-y snap-mandatory h-screen'>
