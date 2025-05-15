@@ -22,7 +22,7 @@ export function ProjectCard({
 }: ProjectCardProps & React.ComponentProps<typeof Card>) {
   return (
     <Card 
-      className={cn("overflow-hidden", liveUrl && "cursor-pointer", className)}
+      className={cn("overflow-hidden", liveUrl && "cursor-pointer", className, "py-1 md:py-6")}
       onClick={liveUrl ? () => window.open(liveUrl, '_blank') : undefined}
       {...props}
     >
@@ -30,46 +30,45 @@ export function ProjectCard({
         {/* Header */}
         <div className="flex justify-between items-start mb-1">
           {/* Left side */}
-          <div className="flex items-center gap-1">
-            <div className="h-5 w-5 md:h-6 md:w-6 rounded-md bg-muted flex items-center justify-center">
+          <div className="flex flex-col items-left gap-1">
+            <div className="h-fit w-5 md:h-6 md:w-6 rounded-md bg-muted flex items-center justify-center">
               {typeof icon === 'string' ? 
-                <Image src={icon} alt={title} width={16} height={16} /> : 
+                <Image src={icon} alt={title} width={22} height={22} /> : 
                 icon}
             </div>
-            <div className="font-medium text-[10px] md:text-xs flex items-center">
+            <div className="font-bold text-[16px] md:text-[17px] flex items-center">
               {title}
-              {liveUrl && <ExternalLinkIcon className="ml-0.5 h-2 w-2 md:h-3 md:w-3" />}
+              {liveUrl && <ExternalLinkIcon className="ml-1 h-4 w-4 md:h-6 md:w-6" />}
             </div>
           </div>
           
           {/* Right side - buttons */}
-          <div className="flex gap-1">
+          <div className="flex md:flex-col gap-3">
             {githubUrl && (
               <a href={githubUrl} target="_blank" rel="noopener" onClick={(e) => e.stopPropagation()}
                 className="flex items-center gap-0.5 text-[8px] md:text-[10px] text-muted-foreground px-1 rounded-sm">
-                <Github className="h-2 w-2 md:h-3 md:w-3" /><span>GitHub</span>
+                <Github className="h-3 w-3 md:h-4 md:w-4" /><span>GitHub</span>
               </a>
             )}
             {demoUrl && (
               <a href={demoUrl} target="_blank" rel="noopener" onClick={(e) => e.stopPropagation()}
                 className="flex items-center gap-0.5 text-[8px] md:text-[10px] text-muted-foreground px-1 rounded-sm">
-                <Video className="h-2 w-2 md:h-3 md:w-3" /><span>Demo</span>
+                <Video className="h-3 w-3 md:h-4 md:w-4" /><span>Demo</span>
               </a>
             )}
           </div>
         </div>
         
         {/* Description */}
-        <div className="text-[8px] md:text-[10px] text-muted-foreground line-clamp-1 mb-1">{description}</div>
+        <div className="text-[13px] md:text-[14px] text-muted-foreground mb-1">{description}</div>
         
         {/* Tags */}
         <div className="flex flex-wrap gap-1">
-          {tags.slice(0, 2).map((tag, i) => (
-            <span key={i} className="bg-muted text-muted-foreground px-1 text-[6px] md:text-[8px] rounded-sm">
+          {tags.map((tag, i) => (
+            <span key={i} className="bg-muted text-muted-foreground px-1 text-[9px] md:text-[11px] rounded-sm">
               {tag}
             </span>
           ))}
-          {tags.length > 2 && <span className="text-[6px] md:text-[8px] text-muted-foreground">+{tags.length - 2}</span>}
         </div>
       </CardContent>
     </Card>

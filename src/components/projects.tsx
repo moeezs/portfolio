@@ -78,7 +78,6 @@ const projects = [
   }
 ]
 
-// Helper function to chunk array into groups of specified size
 const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
   const result: T[][] = [];
   for (let i = 0; i < array.length; i += chunkSize) {
@@ -89,12 +88,12 @@ const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
 
 const ProjectsPage = () => {
   // Group projects into sets of 2 for mobile
-  const projectGroups = chunkArray(projects, 2);
+  const projectGroups = chunkArray(projects, 3);
 
   return (
-    <div id='projects' className="py-4 px-1 md:px-6 max-w-7xl mx-auto">
+    <div id='projects' className="py-4 px-4 md:px-6 mx-auto overflow-hidden">
       <div className="mb-3 md:mb-8 text-center">
-        <h2 className="text-xl md:text-3xl font-bold mb-1 md:mb-2">My Projects</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-1 md:mb-2">My Projects</h2>
         <p className="text-muted-foreground text-[10px] md:text-sm max-w-2xl mx-auto">
           A selection of projects I've built throughout my development journey.
         </p>
@@ -102,13 +101,13 @@ const ProjectsPage = () => {
       
       {/* Mobile view - Carousel with compact cards */}
       <div className="md:hidden">
-        <Carousel className="w-full max-w-full">
-          <CarouselContent>
+        <Carousel className="w-full overflow-hidden">
+          <CarouselContent className="mx-0">
             {projectGroups.map((group, groupIndex) => (
-              <CarouselItem key={groupIndex} className="basis-full px-1">
-                <div className="flex flex-col gap-1 max-w-full">
+              <CarouselItem key={groupIndex} className="basis-full p-0">
+                <div className="flex flex-col gap-2 mx-3">
                   {group.map(project => (
-                    <div key={project.id} className="w-1/2 mx-auto">
+                    <div key={project.id} className="w-full mx-auto">
                       <ProjectCard
                         icon={project.icon}
                         title={project.title}
