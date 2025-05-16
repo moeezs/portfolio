@@ -1,8 +1,9 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Building, Download } from 'lucide-react'
+import { Building } from 'lucide-react'
 import { Button } from './ui/button'
 
 // Type definitions for experience data
@@ -12,6 +13,7 @@ interface ExperienceItem {
   period: string;
   description: string;
   skills: string[];
+  logo?: string; // Optional logo path
 }
 
 interface ExpCardProps extends ExperienceItem {
@@ -26,11 +28,6 @@ const ExperiencePage = () => {
         <p className="text-muted-foreground text-xs md:text-sm max-w-md mx-auto">
           A summary of my professional journey and the skills I've developed along the way.
         </p>
-
-        <Button variant="outline" size="sm" className="mt-4 text-xs">
-          <Download className="mr-2 h-3 w-3" />
-          Download Resume
-        </Button>
       </div>
       
       {/* Experience Timeline */}
@@ -50,7 +47,7 @@ const ExperiencePage = () => {
 }
 
 // Experience Card Component
-const ExpCard = ({ role, company, period, description, skills, index }: ExpCardProps) => {
+const ExpCard = ({ role, company, period, description, skills, logo, index }: ExpCardProps) => {
   return (
     <motion.div 
       className="relative"
@@ -62,47 +59,74 @@ const ExpCard = ({ role, company, period, description, skills, index }: ExpCardP
       <div className="absolute -left-[25px] md:-left-[29px] mt-1.5 w-3 md:w-4 h-3 md:h-4 rounded-full bg-primary border-2 md:border-4 border-background"></div>
       
       <div className="mb-4">
-        <h4 className="text-base md:text-lg font-medium">{role}</h4>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-2">
-          <div className="flex items-center gap-1.5">
-            <Building size={14} className="text-muted-foreground" />
-            <span className="text-sm">{company}</span>
+        <div className="flex items-start gap-3">
+          {logo && (
+            <div className="relative w-10 h-10 rounded-md overflow-hidden bg-background border border-muted flex-shrink-0 shadow-sm hidden sm:block">
+              <Image
+                src={logo}
+                alt={`${company} logo`}
+                fill
+                className="object-contain p-1"
+              />
+            </div>
+          )}
+          
+          <div className="flex-1">
+            <h4 className="text-base md:text-lg font-medium">{role}</h4>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-2">
+              <div className="flex items-center gap-1.5">
+                {logo ? (
+                  <div className="relative w-4 h-4 rounded-sm overflow-hidden bg-background flex-shrink-0 sm:hidden">
+                    <Image
+                      src={logo}
+                      alt={`${company} logo`}
+                      fill
+                      className="object-contain rounded-sm"
+                    />
+                  </div>
+                ) : (
+                  <Building size={14} className="text-muted-foreground" />
+                )}
+                <span className="text-sm">{company}</span>
+              </div>
+              <span className="hidden sm:inline text-muted-foreground">•</span>
+              <span className="bg-muted text-xs rounded-full px-2.5 py-0.5 w-fit">{period}</span>
+            </div>
+            <p className="text-muted-foreground text-xs md:text-sm mb-3">{description}</p>
+            
+            <div className="flex flex-wrap gap-1.5">
+              {skills.map((skill, i) => (
+                <span 
+                  key={i} 
+                  className="text-[10px] md:text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
-          <span className="hidden sm:inline text-muted-foreground">•</span>
-          <span className="bg-muted text-xs rounded-full px-2.5 py-0.5 w-fit">{period}</span>
-        </div>
-        <p className="text-muted-foreground text-xs md:text-sm mb-3">{description}</p>
-        
-        <div className="flex flex-wrap gap-1.5">
-          {skills.map((skill, i) => (
-            <span 
-              key={i} 
-              className="text-[10px] md:text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full"
-            >
-              {skill}
-            </span>
-          ))}
         </div>
       </div>
     </motion.div>
   )
 }
 
-// Experience data
 const experiences: ExperienceItem[] = [
   {
     role: "Robotics Instructor",
-    company: "Tech Solutions Inc.",
-    period: "2024-Present",
-    description: "Leading front-end development for client projects using React and TypeScript. Implemented responsive designs and optimized performance across multiple web applications.",
-    skills: ["React", "TypeScript", "Next.js", "TailwindCSS", "REST APIs"]
+    company: "Zebra Robotics",
+    period: "2025-Present",
+    description: "Teach robotics and programming to students aged 8-18. Develop curriculum and hands-on projects to enhance learning.",
+    skills: ["Robotics", "Python", "C++", "Scratch", "STEM Education"],
+    logo: "/company-logos/zebra-robotics.png"
   },
   {
-    role: "Junior Full Stack Developer",
-    company: "Digital Innovations",
-    period: "2023-2024",
-    description: "Developed and maintained full-stack web applications. Collaborated with design and backend teams to implement new features and improve existing functionality.",
-    skills: ["JavaScript", "Node.js", "MongoDB", "Express", "React"]
+    role: "iOS App Developer Intern",
+    company: "Career Education Council",
+    period: "2023",
+    description: "Developed and maintained iOS applications. Collaborated with design and backend teams to implement new features and improve existing functionality.",
+    skills: ["Swift", "Xcode", "UIKit", "APIs"],
+    logo: "/company-logos/career-education-council.png"
   },
   
 ]

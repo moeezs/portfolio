@@ -47,7 +47,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
     }
 
     return (
-        <div className='flex flex-col justify-between md:h-screen p-3'>
+        <div className='flex flex-col justify-between md:h-screen p-2 md:p-3'>
             {/* Name section - hidden on mobile, visible on desktop */}
             <div className="hidden md:block">
                 <h1 className='text-2xl font-bold text-left md:text-5xl md:pt-[5vh] pb-3 pl-3'>Abdul <br className='hidden md:block' />Moeez <br className='hidden md:block' />Shaikh</h1>
@@ -175,7 +175,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
                 </div>
             </div>
             {/* Mobile name display below nav items */}
-            <div className="md:hidden flex justify-center mt-2 mb-1">
+            <div className="md:hidden flex justify-center mt-1 mb-1">
                 <h2 className='text-lg font-bold text-center'>Abdul Moeez Shaikh</h2>
             </div>
             <div className="flex-col items-center justify-center hidden md:flex">
