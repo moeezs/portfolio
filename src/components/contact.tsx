@@ -8,6 +8,19 @@ import confetti from 'canvas-confetti'
 
 const ContactPage = () => {
   const [buttonLoading, setButtonLoading] = React.useState(false);
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const apiKey = process.env.NEXT_PUBLIC_WEB3FORMS_API_KEY;
 
@@ -15,7 +28,6 @@ const ContactPage = () => {
     setButtonLoading(true);
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
- 
     formData.append('access_key', apiKey as string);
 // console.log('wait for confetti');
     // setTimeout(() => {
@@ -31,7 +43,6 @@ const ContactPage = () => {
     //   setButtonLoading(false);
     // }, 2000);
     
-
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -44,12 +55,14 @@ const ContactPage = () => {
         handleConfetti();
         setButtonLoading(false);
         event.currentTarget.reset();
+        setFormData({ name: '', email: '', message: '' }); 
       } else {
         console.error('Error submitting form:', result);
         setButtonLoading(false);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      setButtonLoading(false);
     }
   };
 
@@ -95,15 +108,35 @@ const ContactPage = () => {
                 <form onSubmit={onSubmit} className="w-full space-y-6 mx-auto">
                   <div className="grid w-full items-center gap-1.5">
                     <Label htmlFor="name">Name</Label>
-                    <Input type="text" id="name" name='name' placeholder="Name" />
+                    <Input 
+                      type="text" 
+                      id="name" 
+                      name='name' 
+                      placeholder="Name" 
+                      value={formData.name}
+                      onChange={handleInputChange}
+                    />
                   </div>
                   <div className="grid w-full items-center gap-1.5">
                     <Label htmlFor="email">Email</Label>
-                    <Input type="email" id="email" name='email' placeholder="Email" />
+                    <Input 
+                      type="email" 
+                      id="email" 
+                      name='email' 
+                      placeholder="Email" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                    />
                   </div>
                   <div className="grid w-full items-center gap-1.5">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" name="message" placeholder="Your message" />
+                    <Textarea 
+                      id="message" 
+                      name="message" 
+                      placeholder="Your message" 
+                      value={formData.message}
+                      onChange={handleInputChange}
+                    />
                   </div>
                   <div className='w-full'>
                     <LoadingButton isLoading={buttonLoading} />

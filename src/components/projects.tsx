@@ -36,7 +36,7 @@ const projects = [
     title: 'VocabBuddy',
     description: 'Master any language with VocabBuddy! This app helps you learn and practice vocabulary by letting you create dictionaries of words you find online on any website. Quiz yourself and quickly learn new words.',
     tags: ['TypeScript', 'IndexedDB', 'HTML', 'CSS'],
-    githubUrl: 'https://github.com/username/task-api',
+    githubUrl: 'https://github.com/moeezs/VocabBuddy',
     demoUrl: 'https://youtu.be/iLDRERtZa4Y',
     icon: '/project-icons/vocabbuddy.png'
   },
