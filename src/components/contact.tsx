@@ -24,24 +24,33 @@ const ContactPage = () => {
     const formData = new FormData(event.currentTarget);
  
     formData.append('access_key', apiKey as string);
-    console.log('wait for confetti');
-    setTimeout(() => {
+    // console.log('wait for confetti');
+    // setTimeout(() => {
       
-      handleConfetti();
-      setButtonLoading(false);
-    }, 2000);
+    //   handleConfetti();
+    //   setButtonLoading(false);
+    // }, 2000);
     
 
-    // try {
-    //   const response = await fetch('https://api.web3forms.com/submit', {
-    //     method: 'POST',
-    //     body: formData,
-    //   });
-    //   const result = await response.json();
-    //   console.log(result);
-    // } catch (error) {
-    //   console.error('Error submitting form:', error);
-    // }
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      
+      if (result.success) {
+        console.log('Form submitted successfully:', result);
+        handleConfetti();
+        setButtonLoading(false);
+        event.currentTarget.reset();
+      } else {
+        console.error('Error submitting form:', result);
+        setButtonLoading(false);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   function handleConfetti() {
