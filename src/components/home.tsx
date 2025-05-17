@@ -1,16 +1,16 @@
 'use client'
 
-import { ChevronsDown, SeparatorHorizontal } from 'lucide-react'
+import { ChevronsDown } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { HomeIcon, UserIcon, FolderIcon, BriefcaseIcon, FileTextIcon, MailIcon, Instagram, Linkedin, Github, Mail } from "lucide-react"
+import { Instagram, Linkedin, Github, Mail } from "lucide-react"
 
 export default function HomePage() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-background">
       <div className="max-w-2xl text-center space-y-8">
         <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight md:pt-20 pt-30">
-          👋 Hello, I'm Moeez
+          👋 Hello, I&apos;m Moeez
         </h1>
         
         {/* Content below with appropriate spacing */}
@@ -19,7 +19,7 @@ export default function HomePage() {
             cs student | web developer | app developer
           </h2>
           <p className="text-base md:text-lg italic text-muted-foreground max-w-md mx-auto">
-            "The moment you doubt whether you can fly, you cease forever to be able to do it."
+            &ldquo;The moment you doubt whether you can fly, you cease forever to be able to do it.&rdquo;
           </p>
           <div className="flex items-center justify-center space-x-2 md:hidden">
                 <Link href="https://instagram.com/abdul_moeez_shaikh" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">

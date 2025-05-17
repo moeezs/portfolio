@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { ProjectCard } from './ui/project-card'
-import { CodeIcon, GlobeIcon, ServerIcon, TerminalIcon, DatabaseIcon, BrainIcon, ShoppingBagIcon } from 'lucide-react'
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +9,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { cn } from '@/lib/utils'
 
 const projects = [
   {
@@ -94,7 +92,7 @@ const ProjectsPage = () => {
       <div className="mb-3 md:mb-8 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-1 md:mb-2">My Projects</h2>
         <p className="text-muted-foreground text-[10px] md:text-sm max-w-2xl mx-auto">
-          A selection of projects I've built throughout my development journey.
+          A selection of projects I&apos;ve built throughout my development journey.
         </p>
       </div>
       

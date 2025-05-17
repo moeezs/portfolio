@@ -4,7 +4,6 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Building } from 'lucide-react'
-import { Button } from './ui/button'
 
 // Type definitions for experience data
 interface ExperienceItem {
@@ -13,7 +12,7 @@ interface ExperienceItem {
   period: string;
   description: string;
   skills: string[];
-  logo?: string; // Optional logo path
+  logo?: string;
 }
 
 interface ExpCardProps extends ExperienceItem {
@@ -26,7 +25,7 @@ const ExperiencePage = () => {
       <div className="mb-8 md:mb-12 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">My Experience</h2>
         <p className="text-muted-foreground text-xs md:text-sm max-w-md mx-auto">
-          A summary of my professional journey and the skills I've developed along the way.
+          A summary of my professional journey and the skills I&apos;ve developed along the way.
         </p>
       </div>
       
@@ -66,7 +65,7 @@ const ExpCard = ({ role, company, period, description, skills, logo, index }: Ex
                 src={logo}
                 alt={`${company} logo`}
                 fill
-                className="object-contain p-1"
+                className="object-contain p-1 rounded-md"
               />
             </div>
           )}
@@ -76,12 +75,12 @@ const ExpCard = ({ role, company, period, description, skills, logo, index }: Ex
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-2">
               <div className="flex items-center gap-1.5">
                 {logo ? (
-                  <div className="relative w-4 h-4 rounded-sm overflow-hidden bg-background flex-shrink-0 sm:hidden">
+                  <div className="relative w-4 h-4 rounded-md overflow-hidden bg-background flex-shrink-0 sm:hidden">
                     <Image
                       src={logo}
                       alt={`${company} logo`}
                       fill
-                      className="object-contain rounded-sm"
+                      className="object-contain rounded-md"
                     />
                   </div>
                 ) : (
