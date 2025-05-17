@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/carousel"
 import { cn } from '@/lib/utils'
 
-// Sample project data
 const projects = [
   {
     id: 1,

@@ -22,7 +22,13 @@ export function ProjectCard({
 }: ProjectCardProps & React.ComponentProps<typeof Card>) {
   return (
     <Card 
-      className={cn("overflow-hidden", liveUrl && "cursor-pointer", className, "py-1 md:py-6")}
+      className={cn(
+        "overflow-hidden relative transition-all duration-200 border-zinc-200/80 dark:border-zinc-800/80",
+        liveUrl && "cursor-pointer", 
+        className, 
+        "py-1 md:py-6",
+        "hover:border-primary/60 hover:shadow-sm"
+      )}
       onClick={liveUrl ? () => window.open(liveUrl, '_blank') : undefined}
       {...props}
     >
@@ -38,7 +44,6 @@ export function ProjectCard({
             </div>
             <div className="font-bold text-[16px] md:text-[17px] flex items-center">
               {title}
-              {liveUrl && <ExternalLinkIcon className="ml-1 h-4 w-4 md:h-6 md:w-6" />}
             </div>
           </div>
           
@@ -46,13 +51,13 @@ export function ProjectCard({
           <div className="flex md:flex-col gap-3">
             {githubUrl && (
               <a href={githubUrl} target="_blank" rel="noopener" onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-0.5 text-[8px] md:text-[10px] text-muted-foreground px-1 rounded-sm">
+                className="flex items-center gap-0.5 text-[8px] md:text-[10px] text-muted-foreground hover:text-primary px-1 rounded-sm transition-colors">
                 <Github className="h-3 w-3 md:h-4 md:w-4" /><span>GitHub</span>
               </a>
             )}
             {demoUrl && (
               <a href={demoUrl} target="_blank" rel="noopener" onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-0.5 text-[8px] md:text-[10px] text-muted-foreground px-1 rounded-sm">
+                className="flex items-center gap-0.5 text-[8px] md:text-[10px] text-muted-foreground hover:text-primary px-1 rounded-sm transition-colors">
                 <Video className="h-3 w-3 md:h-4 md:w-4" /><span>Demo</span>
               </a>
             )}
@@ -65,11 +70,18 @@ export function ProjectCard({
         {/* Tags */}
         <div className="flex flex-wrap gap-1">
           {tags.map((tag, i) => (
-            <span key={i} className="bg-muted text-muted-foreground px-1 text-[9px] md:text-[11px] rounded-sm">
+            <span key={i} className="bg-primary/10 text-primary px-1 text-[9px] md:text-[11px] rounded-sm">
               {tag}
             </span>
           ))}
         </div>
+        
+        {/* Redirect icon positioned at bottom right */}
+        {liveUrl && (
+          <div className="absolute bottom-1.5 right-2 group">
+            <ExternalLinkIcon className="h-4 w-4 md:h-5 md:w-5 text-muted-foreground group-hover:text-primary group-hover:translate-y-[-2px] transition-all duration-200" />
+          </div>
+        )}
       </CardContent>
     </Card>
   )

@@ -11,7 +11,6 @@ import { cn } from '@/lib/utils'
 import { Marquee } from "@/components/magicui/marquee"
 import { motion } from "framer-motion"
 
-// Define animation for the "Drag me" text
 const dragTextAnimation = {
   animate: {
     y: [0, -5, 0],
@@ -27,10 +26,9 @@ interface FunFactType {
   title: string;
   description: string;
   icon: React.ElementType;
-  emoji: string; // Added emoji field
+  emoji: string;
 }
 
-// Tech logos with their respective data
 const techLogos = [
   { name: "React", src: "/tech-logos/react.svg", alt: "React Logo" },
   { name: "Next.js", src: "/tech-logos/nextjs.png", alt: "Next.js Logo" },
@@ -192,7 +190,7 @@ const AboutPage = () => {
           </h3>
           
           <div className="bg-muted/30 rounded-lg p-1 md:p-2 w-full overflow-hidden">
-            {/* Languages Marquee - Top */}
+            {/* Languages Marquee */}
             <Marquee className="py-1 md:py-1.5" pauseOnHover reverse>
               {languages.map((lang, index) => (
                 <div key={index} className="flex flex-col items-center mx-4">
@@ -210,10 +208,9 @@ const AboutPage = () => {
               ))}
             </Marquee>
             
-            {/* Separator line */}
             <div className="w-full h-px bg-muted my-2 md:my-3"></div>
             
-            {/* Tech Stack Marquee - Bottom */}
+            {/* Tech Stack Marquee */}
             <Marquee className="py-1 md:py-1.5" pauseOnHover>
               {techLogos.map((tech, index) => (
                 <div key={index} className="flex flex-col items-center mx-4">
