@@ -1,22 +1,15 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Card, CardContent, CardHeader } from './ui/card'
-import { Button } from './ui/button'
-import { form } from 'framer-motion/client'
-import { Form } from './ui/form'
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from './ui/form'
+import LoadingButton from './custom-ui/loading-button'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
-import LoadingButton from './custom-ui/loading-button'
 import confetti from 'canvas-confetti'
-
-
 
 const ContactPage = () => {
   const [buttonLoading, setButtonLoading] = React.useState(false);
 
   const apiKey = process.env.NEXT_PUBLIC_WEB3FORMS_API_KEY;
-
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     setButtonLoading(true);
@@ -24,7 +17,14 @@ const ContactPage = () => {
     const formData = new FormData(event.currentTarget);
  
     formData.append('access_key', apiKey as string);
-    // console.log('wait for confetti');
+// console.log('wait for confetti');
+    // setTimeout(() => {
+      
+    //   handleConfetti();
+    //   setButtonLoading(false);
+    // }, 2000);
+    
+// console.log('wait for confetti');
     // setTimeout(() => {
       
     //   handleConfetti();
