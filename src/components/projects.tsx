@@ -15,65 +15,65 @@ import { cn } from '@/lib/utils'
 const projects = [
   {
     id: 1,
-    title: 'Portfolio Website',
-    description: 'A responsive portfolio website built with Next.js, Tailwind CSS, and Framer Motion.',
-    tags: ['Next.js', 'React', 'Tailwind'],
-    githubUrl: 'https://github.com/username/portfolio',
-    demoUrl: 'https://demo.portfolio.com',
-    liveUrl: 'https://portfolio.com',
-    icon: <GlobeIcon className="h-5 w-5" />
+    title: 'Yap & Yap',
+    description: 'A really friendly pal of friends from Toy Story that help you answer any moral dillemma, burning question, or just a simple question you have.',
+    tags: ['React', 'Tailwind', 'Gemini', 'JavaScript' ],
+    githubUrl: 'https://github.com/moeezs/yapandyap',
+    demoUrl: 'https://youtu.be/4SmDS0n6Go0',
+    liveUrl: 'https://yapandyap.onrender.com',
+    icon: '/project-icons/yap.png'
   },
   {
     id: 2,
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce platform with product listings and payment processing.',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    liveUrl: 'https://ecommerce.com',
-    icon: <ShoppingBagIcon className="h-5 w-5" />
+    title: 'Commence',
+    description: 'Upload your syllabus and let Commence do the rest. You will receive all of your course weightings and all the important dates for a course with an easily downloadable calendar.',
+    tags: ['HTML', 'CSS', 'Flask', 'Python', 'Gemini'],
+    githubUrl: 'https://github.com/moeezs/commence',
+    liveUrl: 'https://commence.onrender.com',
+    demoUrl: 'https://youtu.be/cmOyMfzMXG4',
+    icon: '/project-icons/commence.png'
   },
   {
     id: 3,
-    title: 'Task Management API',
-    description: 'A RESTful API for managing tasks and projects with authentication.',
-    tags: ['Express', 'MongoDB', 'JWT'],
+    title: 'VocabBuddy',
+    description: 'Master any language with VocabBuddy! This app helps you learn and practice vocabulary by letting you create dictionaries of words you find online on any website. Quiz yourself and quickly learn new words.',
+    tags: ['TypeScript', 'IndexedDB', 'HTML', 'CSS'],
     githubUrl: 'https://github.com/username/task-api',
-    icon: <ServerIcon className="h-5 w-5" />
+    demoUrl: 'https://youtu.be/iLDRERtZa4Y',
+    icon: '/project-icons/vocabbuddy.png'
   },
   {
     id: 4,
-    title: 'Data Visualization',
-    description: 'Interactive dashboard for visualizing complex data with customizable charts.',
-    tags: ['D3.js', 'React', 'Firebase'],
-    githubUrl: 'https://github.com/username/data-dashboard',
-    demoUrl: 'https://demo.data-dashboard.com',
-    icon: <DatabaseIcon className="h-5 w-5" />
+    title: 'CareSync',
+    description: 'A simple and intuitive app for managing patient records. Designed for healthcare professionals, it allows easy access to patient information.',
+    tags: ['Java', 'SceneBuilder', 'JavaFX'],
+    githubUrl: 'https://github.com/moeezs/CareSync',
+    icon: '/project-icons/caresync.png'
   },
   {
     id: 5,
-    title: 'CLI Tool Suite',
-    description: 'Command-line tools for automating development workflows and productivity.',
-    tags: ['Python', 'Node.js', 'Shell'],
-    githubUrl: 'https://github.com/username/cli-tools',
-    icon: <TerminalIcon className="h-5 w-5" />
+    title: 'GoPic',
+    description: 'Take a picture of any place you visit, share with your friends where anyone can leave reviews to the place or book a cab or even a plane within the app.',
+    tags: ['Swift', 'Xcode', 'SwiftUI'],
+    githubUrl: 'https://github.com/moeezs/GoPic/',
+    icon: '/project-icons/gopic.png'
   },
   {
     id: 6,
-    title: 'Machine Learning Model',
-    description: 'An image classification model trained on custom data with high accuracy.',
-    tags: ['Python', 'TensorFlow', 'AWS'],
-    githubUrl: 'https://github.com/username/ml-model',
-    demoUrl: 'https://demo.ml-model.com',
-    icon: <BrainIcon className="h-5 w-5" />
+    title: 'Resume Analyzer',
+    description: 'A web app that analyzes resumes and provides feedback on formatting, keywords, and ATS compatibility.',
+    tags: ['HTML', 'JavaScript', 'CSS'],
+    githubUrl: 'https://github.com/moeezs/Resume-Analyzer',
+    liveUrl: 'https://moeezs.github.io/Resume-Analyzer/',
+    icon: '/project-icons/resume.png'
   },
   {
     id: 7,
-    title: 'Code Snippet Manager',
-    description: 'Web app for developers to store, organize, and share code snippets.',
-    tags: ['React', 'GraphQL', 'PostgreSQL'],
-    githubUrl: 'https://github.com/username/snippet-manager',
-    liveUrl: 'https://snippet-manager.com',
-    icon: <CodeIcon className="h-5 w-5" />
+    title: 'MedTrack',
+    description: 'A python app that allows you to track your medications and gives you a visual calender of when to take your medications.',
+    tags: ['Python', 'Tkinter'],
+    githubUrl: 'https://github.com/moeezs/MedTrack',
+    icon: '/project-icons/medtrack.png'
   }
 ]
 
