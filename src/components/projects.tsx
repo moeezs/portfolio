@@ -17,7 +17,7 @@ const projects = [
     description: 'A fun and realistic basketball simulation game where you can create your own team and compete against others. The game features lifelike player stats, actions and plays.',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Apache'],
     githubUrl: 'https://github.com/moeezs/HoopsDynasty',
-    icons: '/project-icons/hoopsdynasty.png',
+    icon: '/project-icons/hoopsdynasty.png',
   },
   {
     id: 1,
