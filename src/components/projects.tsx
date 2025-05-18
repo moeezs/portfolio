@@ -12,6 +12,14 @@ import {
 
 const projects = [
   {
+    id: 0,
+    title: 'Hoops Dynasty',
+    description: 'A fun and realistic basketball simulation game where you can create your own team and compete against others. The game features lifelike player stats, actions and plays.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Apache'],
+    githubUrl: 'https://github.com/moeezs/HoopsDynasty',
+    icons: '/project-icons/hoopdynasty.png',
+  },
+  {
     id: 1,
     title: 'Yap & Yap',
     description: 'A really friendly pal of friends from Toy Story that help you answer any moral dillemma, burning question, or just a simple question you have.',
