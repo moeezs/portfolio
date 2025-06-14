@@ -13,6 +13,34 @@ import {
 const projects = [
   {
     id: 0,
+    title: 'Crave It',
+    description: 'A easy and interactive way to cook. It gives you clean and easy to follow recipes with a simple and intuitive interface. You can also set timers, listen to the steps and share them with friends.',
+    tags: ['Next.js', 'React', 'TypeScript'],
+    githubUrl: 'https://github.com/moeezs/craveit',
+    icon: '/project-icons/craveit.png',
+  },
+  {
+    id: 1,
+    title: 'All Recipes RESTful API',
+    description: 'A RESTful API for accessing a curated database of recipes from AllRecipes website. It allows users to extract all the information they need about recipes, including ingredients, instructions, and nutritional information.',
+    tags: ['Node.js', 'React', 'Vite', 'TypeScript', 'Express', 'Puppeteer'],
+    githubUrl: 'https://github.com/moeezs/recipes-api',
+    icon: '/project-icons/recipes-api.png',
+    liveUrl: 'https://recipes-api-production-6853.up.railway.app/',
+    demoUrl: 'https://x.com/amoeezs/status/1929320049879240944',
+  },
+  {
+    id: 2,
+    title: 'Just Apply',
+    description: 'An app to generate tailored resumes using Gemini AI, GitHub, and LinkedIn data.',
+    tags: ['Next.js', 'TypeScript', 'React', 'Gemini API', 'Apify'],
+    githubUrl: 'https://github.com/moeezs/just-apply',
+    icon: '/project-icons/justapply.png',
+    liveUrl: 'https://just-apply-eight.vercel.app/',
+    demoUrl: 'https://x.com/amoeezs/status/1926812616313155746',
+  },
+  {
+    id: 3,
     title: 'Hoops Dynasty',
     description: 'A fun and realistic basketball simulation game where you can create your own team and compete against others. The game features lifelike player stats, actions and plays.',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Apache'],
@@ -20,7 +48,7 @@ const projects = [
     icon: '/project-icons/hoopsdynasty.png',
   },
   {
-    id: 1,
+    id: 4,
     title: 'Yap & Yap',
     description: 'A really friendly pal of friends from Toy Story that help you answer any moral dillemma, burning question, or just a simple question you have.',
     tags: ['React', 'Tailwind', 'Gemini', 'JavaScript' ],
@@ -30,7 +58,7 @@ const projects = [
     icon: '/project-icons/yap.png'
   },
   {
-    id: 2,
+    id: 5,
     title: 'Commence',
     description: 'Upload your syllabus and let Commence do the rest. You will receive all of your course weightings and all the important dates for a course with an easily downloadable calendar.',
     tags: ['HTML', 'CSS', 'Flask', 'Python', 'Gemini'],
@@ -40,7 +68,7 @@ const projects = [
     icon: '/project-icons/commence.png'
   },
   {
-    id: 3,
+    id: 6,
     title: 'VocabBuddy',
     description: 'Master any language with VocabBuddy! This app helps you learn and practice vocabulary by letting you create dictionaries of words you find online on any website. Quiz yourself and quickly learn new words.',
     tags: ['TypeScript', 'IndexedDB', 'HTML', 'CSS'],
@@ -49,7 +77,7 @@ const projects = [
     icon: '/project-icons/vocabbuddy.png'
   },
   {
-    id: 4,
+    id: 7,
     title: 'CareSync',
     description: 'A simple and intuitive app for managing patient records. Designed for healthcare professionals, it allows easy access to patient information.',
     tags: ['Java', 'SceneBuilder', 'JavaFX'],
@@ -57,7 +85,7 @@ const projects = [
     icon: '/project-icons/caresync.png'
   },
   {
-    id: 5,
+    id: 8,
     title: 'GoPic',
     description: 'Take a picture of any place you visit, share with your friends where anyone can leave reviews to the place or book a cab or even a plane within the app.',
     tags: ['Swift', 'Xcode', 'SwiftUI'],
@@ -65,7 +93,7 @@ const projects = [
     icon: '/project-icons/gopic.png'
   },
   {
-    id: 6,
+    id: 9,
     title: 'Resume Analyzer',
     description: 'A web app that analyzes resumes and provides feedback on formatting, keywords, and ATS compatibility.',
     tags: ['HTML', 'JavaScript', 'CSS'],
@@ -74,7 +102,7 @@ const projects = [
     icon: '/project-icons/resume.png'
   },
   {
-    id: 7,
+    id: 10,
     title: 'MedTrack',
     description: 'A python app that allows you to track your medications and gives you a visual calender of when to take your medications.',
     tags: ['Python', 'Tkinter'],
