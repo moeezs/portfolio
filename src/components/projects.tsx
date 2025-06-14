@@ -14,7 +14,7 @@ const projects = [
   {
     id: 0,
     title: 'Crave It',
-    description: 'A easy and interactive way to cook. It gives you clean and easy to follow recipes with a simple and intuitive interface. You can also set timers, listen to the steps and share them with friends.',
+    description: 'An interactive cooking app that provides clean and easy-to-follow recipes with a simple interface. Set timers, listen to step instructions, and share recipes with friends.',
     tags: ['Next.js', 'React', 'TypeScript'],
     githubUrl: 'https://github.com/moeezs/craveit',
     icon: '/project-icons/craveit.png',
@@ -22,7 +22,7 @@ const projects = [
   {
     id: 1,
     title: 'All Recipes RESTful API',
-    description: 'A RESTful API for accessing a curated database of recipes from AllRecipes website. It allows users to extract all the information they need about recipes, including ingredients, instructions, and nutritional information.',
+    description: 'A RESTful API for accessing curated recipes from AllRecipes. Extract comprehensive recipe information including ingredients, instructions, and nutritional data.',
     tags: ['Node.js', 'React', 'Vite', 'TypeScript', 'Express', 'Puppeteer'],
     githubUrl: 'https://github.com/moeezs/recipes-api',
     icon: '/project-icons/recipes-api.png',
@@ -32,7 +32,7 @@ const projects = [
   {
     id: 2,
     title: 'Just Apply',
-    description: 'An app to generate tailored resumes using Gemini AI, GitHub, and LinkedIn data.',
+    description: 'An intelligent app that generates tailored resumes using Gemini AI, automatically pulling data from your GitHub profile and LinkedIn to create perfect applications.',
     tags: ['Next.js', 'TypeScript', 'React', 'Gemini API', 'Apify'],
     githubUrl: 'https://github.com/moeezs/just-apply',
     icon: '/project-icons/justapply.png',
@@ -42,7 +42,7 @@ const projects = [
   {
     id: 3,
     title: 'Hoops Dynasty',
-    description: 'A fun and realistic basketball simulation game where you can create your own team and compete against others. The game features lifelike player stats, actions and plays.',
+    description: 'A realistic basketball simulation game where you create your own team and compete against others. Features lifelike player stats, dynamic actions, and strategic plays.',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Apache'],
     githubUrl: 'https://github.com/moeezs/HoopsDynasty',
     icon: '/project-icons/hoopsdynasty.png',
@@ -50,7 +50,7 @@ const projects = [
   {
     id: 4,
     title: 'Yap & Yap',
-    description: 'A really friendly pal of friends from Toy Story that help you answer any moral dillemma, burning question, or just a simple question you have.',
+    description: 'A really friendly pal of friends from Toy Story that help you answer any moral dilemma, burning question, or just a simple question you have.',
     tags: ['React', 'Tailwind', 'Gemini', 'JavaScript' ],
     githubUrl: 'https://github.com/moeezs/yapandyap',
     demoUrl: 'https://youtu.be/4SmDS0n6Go0',
@@ -60,7 +60,7 @@ const projects = [
   {
     id: 5,
     title: 'Commence',
-    description: 'Upload your syllabus and let Commence do the rest. You will receive all of your course weightings and all the important dates for a course with an easily downloadable calendar.',
+    description: 'Upload your course syllabus and let Commence extract all course weightings and important dates. Get a clean calendar view with downloadable course schedules.',
     tags: ['HTML', 'CSS', 'Flask', 'Python', 'Gemini'],
     githubUrl: 'https://github.com/moeezs/commence',
     liveUrl: 'https://commence.onrender.com',
@@ -70,7 +70,7 @@ const projects = [
   {
     id: 6,
     title: 'VocabBuddy',
-    description: 'Master any language with VocabBuddy! This app helps you learn and practice vocabulary by letting you create dictionaries of words you find online on any website. Quiz yourself and quickly learn new words.',
+    description: 'Master any language with VocabBuddy! Create dictionaries from words you find online, quiz yourself on vocabulary, and accelerate your language learning journey.',
     tags: ['TypeScript', 'IndexedDB', 'HTML', 'CSS'],
     githubUrl: 'https://github.com/moeezs/VocabBuddy',
     demoUrl: 'https://youtu.be/iLDRERtZa4Y',
@@ -79,7 +79,7 @@ const projects = [
   {
     id: 7,
     title: 'CareSync',
-    description: 'A simple and intuitive app for managing patient records. Designed for healthcare professionals, it allows easy access to patient information.',
+    description: 'A simple and intuitive patient management system designed for healthcare professionals. Easily access, update, and organize patient records with a clean interface.',
     tags: ['Java', 'SceneBuilder', 'JavaFX'],
     githubUrl: 'https://github.com/moeezs/CareSync',
     icon: '/project-icons/caresync.png'
@@ -87,7 +87,7 @@ const projects = [
   {
     id: 8,
     title: 'GoPic',
-    description: 'Take a picture of any place you visit, share with your friends where anyone can leave reviews to the place or book a cab or even a plane within the app.',
+    description: 'Take pictures of places you visit and share them with friends. Others can leave reviews, book transportation, or even flights directly within the app.',
     tags: ['Swift', 'Xcode', 'SwiftUI'],
     githubUrl: 'https://github.com/moeezs/GoPic/',
     icon: '/project-icons/gopic.png'
@@ -95,7 +95,7 @@ const projects = [
   {
     id: 9,
     title: 'Resume Analyzer',
-    description: 'A web app that analyzes resumes and provides feedback on formatting, keywords, and ATS compatibility.',
+    description: 'A web application that analyzes your resume and provides detailed feedback on formatting, keyword optimization, and ATS compatibility for better job applications.',
     tags: ['HTML', 'JavaScript', 'CSS'],
     githubUrl: 'https://github.com/moeezs/Resume-Analyzer',
     liveUrl: 'https://moeezs.github.io/Resume-Analyzer/',
@@ -104,7 +104,7 @@ const projects = [
   {
     id: 10,
     title: 'MedTrack',
-    description: 'A python app that allows you to track your medications and gives you a visual calender of when to take your medications.',
+    description: 'A Python application that helps you track medications with visual calendar reminders. Never miss a dose with clear scheduling and notification features.',
     tags: ['Python', 'Tkinter'],
     githubUrl: 'https://github.com/moeezs/MedTrack',
     icon: '/project-icons/medtrack.png'
