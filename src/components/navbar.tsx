@@ -6,6 +6,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { HomeIcon, UserIcon, FolderIcon, BriefcaseIcon, FileTextIcon, MailIcon, Instagram, Linkedin, Github, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Link from 'next/link'
+import { FaXTwitter } from "react-icons/fa6";
 
 interface NavBarProps {
     scrollToSectionFunction?: (sectionId: string) => void;
@@ -188,6 +189,9 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
                     </Link>
                     <Link href="https://github.com/moeezs" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
                         <Github size={30} strokeWidth={1.5} className="hover:text-primary" />
+                    </Link>
+                    <Link href="https://x.com/amoeezs" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
+                        <FaXTwitter size={30} strokeWidth={1.5} className="hover:text-primary" />
                     </Link>
                     <Link href="mailto:abdulmoeezshaikh@gmail.com" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
                         <Mail size={30} strokeWidth={1.5} className="hover:text-primary" />
