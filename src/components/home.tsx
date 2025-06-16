@@ -33,7 +33,7 @@ export default function HomePage() {
               <Github size={20} strokeWidth={1.5} className="hover:text-primary" />
             </Link>
             <Link href="https://x.com/amoeezs" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
-              <FaXTwitter size={30} strokeWidth={1.5} className="hover:text-primary" />
+              <FaXTwitter size={20} strokeWidth={1.5} className="hover:text-primary" />
             </Link>
             <Link href="mailto:abdulmoeezshaikh@gmail.com" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
               <Mail size={20} strokeWidth={1.5} className="hover:text-primary" />
