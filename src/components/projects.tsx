@@ -18,6 +18,7 @@ const projects = [
     tags: ['Next.js', 'React', 'TypeScript'],
     githubUrl: 'https://github.com/moeezs/craveit',
     icon: '/project-icons/craveit.png',
+    liveUrl: 'https://craveit-zeta.vercel.app',
   },
   {
     id: 1,
