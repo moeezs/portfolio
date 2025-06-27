@@ -32,9 +32,9 @@ export default function HomePage() {
             <Link href="https://github.com/moeezs" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
               <Github size={20} strokeWidth={1.5} className="hover:text-primary" />
             </Link>
-            <Link href="https://x.com/amoeezs" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
+            {/* <Link href="https://x.com/amoeezs" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
               <FaXTwitter size={20} strokeWidth={1.5} className="hover:text-primary" />
-            </Link>
+            </Link> */}
             <Link href="mailto:abdulmoeezshaikh@gmail.com" target="_blank" className="p-2 rounded-md hover:bg-muted/80 transition-colors">
               <Mail size={20} strokeWidth={1.5} className="hover:text-primary" />
             </Link>
