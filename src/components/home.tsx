@@ -4,7 +4,7 @@ import { ChevronsDown } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Instagram, Linkedin, Github, Mail } from "lucide-react"
-import { FaXTwitter } from "react-icons/fa6";
+// import { FaXTwitter } from "react-icons/fa6";
 
 export default function HomePage() {
   return (
