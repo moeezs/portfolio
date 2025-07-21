@@ -121,8 +121,8 @@ const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
 };
 
 const ProjectsPage = () => {
-  // Group projects into sets of 2 for mobile
-  const projectGroups = chunkArray(projects, 3);
+  const mobileProjectGroups = chunkArray(projects, 3);
+  const desktopProjectGroups = chunkArray(projects, 8);
 
   return (
     <div id='projects' className="py-4 px-4 md:px-6 mx-auto overflow-hidden">
@@ -137,7 +137,7 @@ const ProjectsPage = () => {
       <div className="md:hidden">
         <Carousel className="w-full overflow-hidden">
           <CarouselContent className="mx-0">
-            {projectGroups.map((group, groupIndex) => (
+            {mobileProjectGroups.map((group, groupIndex) => (
               <CarouselItem key={groupIndex} className="basis-full p-0">
                 <div className="flex flex-col gap-2 mx-3">
                   {group.map(project => (
@@ -164,20 +164,34 @@ const ProjectsPage = () => {
         </Carousel>
       </div>
       
-      {/* Desktop view - Grid layout */}
-      <div className="hidden md:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            icon={project.icon}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            githubUrl={project.githubUrl}
-            demoUrl={project.demoUrl}
-            liveUrl={project.liveUrl}
-          />
-        ))}
+      {/* Desktop view - Carousel with grid layout */}
+      <div className="hidden md:block">
+        <Carousel className="w-full overflow-hidden">
+          <CarouselContent className="mx-0">
+            {desktopProjectGroups.map((group, groupIndex) => (
+              <CarouselItem key={groupIndex} className="basis-full p-0">
+                <div className="grid grid-cols-4 gap-3 mx-3">
+                  {group.map(project => (
+                    <ProjectCard
+                      key={project.id}
+                      icon={project.icon}
+                      title={project.title}
+                      description={project.description}
+                      tags={project.tags}
+                      githubUrl={project.githubUrl}
+                      demoUrl={project.demoUrl}
+                      liveUrl={project.liveUrl}
+                    />
+                  ))}
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center gap-2 mt-4">
+            <CarouselPrevious className="relative inset-0 translate-y-0 left-0 h-8 w-8" />
+            <CarouselNext className="relative inset-0 translate-y-0 right-0 h-8 w-8" />
+          </div>
+        </Carousel>
       </div>
     </div>
   )
