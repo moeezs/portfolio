@@ -42,7 +42,7 @@ export default function HomePage() {
 
           {/* Animated scroll icon */}
           <motion.a
-            href="#projects"
+            href="#about"
             className="inline-block pt-2"
             initial={{ y: 0 }}
             animate={{ y: [0, 10, 0] }}
