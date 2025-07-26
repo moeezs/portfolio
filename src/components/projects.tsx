@@ -9,7 +9,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { icons } from 'lucide-react'
 
 const projects = [
   {
