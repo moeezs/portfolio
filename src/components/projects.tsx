@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { icons } from 'lucide-react'
 
 const projects = [
   {
@@ -109,7 +110,18 @@ const projects = [
     githubUrl: 'https://github.com/moeezs/craveit',
     icon: '/project-icons/craveit.png',
     liveUrl: 'https://craveit-zeta.vercel.app',
+  },
+  {
+    id: 11,
+    title: 'World Cup Predictor',
+    description: 'A machine learning model that predicts the winner of the FIFA World Cup based on team statistics and historical data. Includes a web app for user interaction.',
+    tags: ['Python', 'Flask', 'Machine Learning', 'scikit-learn', 'React'],
+    icon: '/project-icons/world-cup.png',
+    githubUrl: 'https://github.com/moeezs/world-cup-predictor',
+    demoUrl: 'https://x.com/amoeezs/status/1946600379589804111',
+    liveUrl: 'https://world-cup-predictor.vercel.app/',
   }
+
 ]
 
 const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {

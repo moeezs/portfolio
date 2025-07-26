@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, ChevronRight, Sparkle } from 'lucide-react'
+import { Calendar, Eye, ChevronRight, Sparkle, Volleyball } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -37,11 +37,22 @@ const mockUpdates: Update[] = [
     title: "What's New Section Launches",
     description: "Introducing the new 'What's New' section to keep you updated on my latest projects and learning journey.",
     fullContent: "This section will feature weekly updates on what I've been learning, building, and discovering in my coding journey. Expect insights into new technologies, project highlights, and personal growth milestones. Above you can see an image with the page filled with mock data. That is my goal to atleast fill this page before school starts.",
-    date: "2023-10-01",
+    date: "2025-07-25",
     icon: Sparkle,
     image: "/whats-new/whats-new.png",
     rotation: -2,
     colorClass: updateColors.blue
+  },
+  {
+    id: 2,
+    title: "New Projects Update and New Learning",
+    description: "Added new projects to showcase my latest work and learning experiences.",
+    fullContent: "This update includes new projects that highlight my newly learned skills in ML. I built a simple ML model to predict the world cup winner and a web app to use the model. Check out the projects section for the project code and demo. I made this in light of the upcoming world cup and to build a project that interests me. I still have a lot to learn in ML, but this is a good start.",
+    date: "2025-07-26",
+    icon: Volleyball,
+    image: "/whats-new/world-cup.png",
+    rotation: 2,
+    colorClass: updateColors.green
   }
 
 ]
