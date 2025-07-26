@@ -129,7 +129,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
                                 <RadioGroupItem value="whats-new" id="whats-new-nav" />
                             </div>
                             <Label htmlFor="whats-new-nav" className="font-normal cursor-pointer md:block hidden text-sm">
-                                What's New
+                                What&apos;s New
                             </Label>
                         </div>
 

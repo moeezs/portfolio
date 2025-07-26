@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, Code, Coffee, BookOpen, Laptop, Gamepad2, Brain, Target, Zap, ChevronRight, Section, Sparkle } from 'lucide-react'
+import { Calendar, Eye, ChevronRight, Sparkle } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -93,9 +93,9 @@ function WhatsNew() {
   return (
     <div id='whats-new' className="py-8 md:py-12 px-4 md:px-6 max-w-6xl mx-auto">
       <div className="mb-8 md:mb-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4">What's New</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4">What&apos;s New</h2>
         <p className="text-muted-foreground text-[10px] md:text-sm max-w-2xl mx-auto ">
-          Weekly updates on what I've been learning, building, and discovering in my coding journey.
+          Weekly updates on what I&apos;ve been learning, building, and discovering in my coding journey.
         </p>
       </div>
 
