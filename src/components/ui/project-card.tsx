@@ -40,7 +40,7 @@ export function ProjectCard({
                 <Image src={icon} alt={title} width={40} height={40} className="rounded-sm" /> : 
                 icon}
             </div>
-            <div className="font-bold text-[16px] md:text-[17px] flex items-center">
+            <div className="font-bold text-[15px] md:text-[16px] lg:text-[17px] flex items-center">
               {title}
             </div>
           </div>
@@ -60,9 +60,9 @@ export function ProjectCard({
             )}
           </div>
         </div>
-        
-        <div className="text-[10px] md:text-[14px] text-muted-foreground mb-1">{description}</div>
-        
+
+        <div className="text-[10px] md:text-[12px] lg:text-[14px] text-muted-foreground mb-1">{description}</div>
+
         <div className="flex flex-wrap gap-1">
           {tags.map((tag, i) => (
             <span key={i} className="bg-primary/10 text-primary px-1 text-[9px] md:text-[11px] rounded-sm">
