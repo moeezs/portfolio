@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, ChevronRight, Sparkle, Volleyball } from 'lucide-react'
+import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -53,7 +53,19 @@ const mockUpdates: Update[] = [
     image: "/whats-new/world-cup.png",
     rotation: 2,
     colorClass: updateColors.green
+  },
+  {
+    id: 3,
+    title: "SCATTER!!",
+    description: "A new project showcasing making cool small apps every week.",
+    fullContent: "Scatter is a new initiative where I create and share small applications on a weekly basis. Each app will focus on a specific problem or idea, allowing me to experiment with different technologies and approaches. I already have 2 projects built and released in them, Reelax and Rainbolt. Check them out at scatter.moeezs.com. Stay tuned for more updates!",
+    date: "2025-07-27",
+    icon: GamepadIcon,
+    image: "/whats-new/scatter.png",
+    rotation: 2,
+    colorClass: updateColors.orange
   }
+
 
 ]
 
