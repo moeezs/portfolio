@@ -8,6 +8,7 @@ import ProjectsPage from '@/components/projects'
 import ExperiencePage from '@/components/experience'
 import ResumePage from '@/components/resume'
 import ContactPage from '@/components/contact'
+import WhatsNew from '@/components/whats-new'
 
 const Main = () => {
   // Reference to the scroll container for mobile navigation
@@ -91,6 +92,10 @@ const Main = () => {
           </div>
 
           <div className='min-h-screen w-full flex justify-center items-center snap-center'>
+            <WhatsNew />
+          </div>
+
+          <div className='min-h-screen w-full flex justify-center items-center snap-center'>
             <ExperiencePage />
           </div>
 
@@ -121,6 +126,10 @@ const Main = () => {
 
           <div id="projects" className='h-mobile-section w-full flex justify-center items-center snap-center'>
             <ProjectsPage />
+          </div>
+
+          <div id="whats-new" className='h-mobile-section w-full flex justify-center items-center snap-center'>
+            <WhatsNew />
           </div>
 
           <div id="experience" className='h-mobile-section w-full flex justify-center items-center snap-center'>

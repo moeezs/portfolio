@@ -12,51 +12,46 @@ import {
 
 const projects = [
   {
-    id: 0,
-    title: 'Crave It',
-    description: 'An interactive cooking app that provides clean and easy-to-follow recipes with a simple interface. Set timers, listen to step instructions, and share recipes with friends.',
-    tags: ['Next.js', 'React', 'TypeScript'],
-    githubUrl: 'https://github.com/moeezs/craveit',
-    icon: '/project-icons/craveit.png',
-    liveUrl: 'https://craveit-zeta.vercel.app',
+    id: 10,
+    title: 'MedTrack',
+    description: 'A Python application that helps you track medications with visual calendar reminders. Never miss a dose with clear scheduling and notification features.',
+    tags: ['Python', 'Tkinter'],
+    githubUrl: 'https://github.com/moeezs/MedTrack',
+    icon: '/project-icons/medtrack.png'
   },
   {
-    id: 1,
-    title: 'All Recipes RESTful API',
-    description: 'A RESTful API for accessing curated recipes from AllRecipes. Extract comprehensive recipe information including ingredients, instructions, and nutritional data.',
-    tags: ['Node.js', 'React', 'Vite', 'TypeScript', 'Express', 'Puppeteer'],
-    githubUrl: 'https://github.com/moeezs/recipes-api',
-    icon: '/project-icons/recipes-api.png',
-    liveUrl: 'https://recipes-api-production-6853.up.railway.app/',
-    demoUrl: 'https://x.com/amoeezs/status/1929320049879240944',
+    id: 9,
+    title: 'Resume Analyzer',
+    description: 'A web application that analyzes your resume and provides detailed feedback on formatting, keyword optimization, and ATS compatibility for better job applications.',
+    tags: ['HTML', 'JavaScript', 'CSS'],
+    githubUrl: 'https://github.com/moeezs/Resume-Analyzer',
+    liveUrl: 'https://moeezs.github.io/Resume-Analyzer/',
+    icon: '/project-icons/resume.png'
   },
   {
-    id: 2,
-    title: 'Just Apply',
-    description: 'An intelligent app that generates tailored resumes using Gemini AI, automatically pulling data from your GitHub profile and LinkedIn to create perfect applications.',
-    tags: ['Next.js', 'TypeScript', 'React', 'Gemini API', 'Apify'],
-    githubUrl: 'https://github.com/moeezs/just-apply',
-    icon: '/project-icons/justapply.png',
-    liveUrl: 'https://just-apply-eight.vercel.app/',
-    demoUrl: 'https://x.com/amoeezs/status/1926812616313155746',
+    id: 8,
+    title: 'GoPic',
+    description: 'Take pictures of places you visit and share them with friends. Others can leave reviews, book transportation, or even flights directly within the app.',
+    tags: ['Swift', 'Xcode', 'SwiftUI'],
+    githubUrl: 'https://github.com/moeezs/GoPic/',
+    icon: '/project-icons/gopic.png'
   },
   {
-    id: 3,
-    title: 'Hoops Dynasty',
-    description: 'A realistic basketball simulation game where you create your own team and compete against others. Features lifelike player stats, dynamic actions, and strategic plays.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Apache'],
-    githubUrl: 'https://github.com/moeezs/HoopsDynasty',
-    icon: '/project-icons/hoopsdynasty.png',
+    id: 7,
+    title: 'CareSync',
+    description: 'A simple and intuitive patient management system designed for healthcare professionals. Easily access, update, and organize patient records with a clean interface.',
+    tags: ['Java', 'SceneBuilder', 'JavaFX'],
+    githubUrl: 'https://github.com/moeezs/CareSync',
+    icon: '/project-icons/caresync.png'
   },
   {
-    id: 4,
-    title: 'Yap & Yap',
-    description: 'A really friendly pal of friends from Toy Story that help you answer any moral dilemma, burning question, or just a simple question you have.',
-    tags: ['React', 'Tailwind', 'Gemini', 'JavaScript' ],
-    githubUrl: 'https://github.com/moeezs/yapandyap',
-    demoUrl: 'https://youtu.be/4SmDS0n6Go0',
-    liveUrl: 'https://yapandyap.onrender.com',
-    icon: '/project-icons/yap.png'
+    id: 6,
+    title: 'VocabBuddy',
+    description: 'Master any language with VocabBuddy! Create dictionaries from words you find online, quiz yourself on vocabulary, and accelerate your language learning journey.',
+    tags: ['TypeScript', 'IndexedDB', 'HTML', 'CSS'],
+    githubUrl: 'https://github.com/moeezs/VocabBuddy',
+    demoUrl: 'https://youtu.be/iLDRERtZa4Y',
+    icon: '/project-icons/vocabbuddy.png'
   },
   {
     id: 5,
@@ -69,46 +64,51 @@ const projects = [
     icon: '/project-icons/commence.png'
   },
   {
-    id: 6,
-    title: 'VocabBuddy',
-    description: 'Master any language with VocabBuddy! Create dictionaries from words you find online, quiz yourself on vocabulary, and accelerate your language learning journey.',
-    tags: ['TypeScript', 'IndexedDB', 'HTML', 'CSS'],
-    githubUrl: 'https://github.com/moeezs/VocabBuddy',
-    demoUrl: 'https://youtu.be/iLDRERtZa4Y',
-    icon: '/project-icons/vocabbuddy.png'
+    id: 4,
+    title: 'Yap & Yap',
+    description: 'A really friendly pal of friends from Toy Story that help you answer any moral dilemma, burning question, or just a simple question you have.',
+    tags: ['React', 'Tailwind', 'Gemini', 'JavaScript' ],
+    githubUrl: 'https://github.com/moeezs/yapandyap',
+    demoUrl: 'https://youtu.be/4SmDS0n6Go0',
+    liveUrl: 'https://yapandyap.onrender.com',
+    icon: '/project-icons/yap.png'
   },
   {
-    id: 7,
-    title: 'CareSync',
-    description: 'A simple and intuitive patient management system designed for healthcare professionals. Easily access, update, and organize patient records with a clean interface.',
-    tags: ['Java', 'SceneBuilder', 'JavaFX'],
-    githubUrl: 'https://github.com/moeezs/CareSync',
-    icon: '/project-icons/caresync.png'
+    id: 3,
+    title: 'Hoops Dynasty',
+    description: 'A realistic basketball simulation game where you create your own team and compete against others. Features lifelike player stats, dynamic actions, and strategic plays.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Apache'],
+    githubUrl: 'https://github.com/moeezs/HoopsDynasty',
+    icon: '/project-icons/hoopsdynasty.png',
   },
   {
-    id: 8,
-    title: 'GoPic',
-    description: 'Take pictures of places you visit and share them with friends. Others can leave reviews, book transportation, or even flights directly within the app.',
-    tags: ['Swift', 'Xcode', 'SwiftUI'],
-    githubUrl: 'https://github.com/moeezs/GoPic/',
-    icon: '/project-icons/gopic.png'
+    id: 2,
+    title: 'Just Apply',
+    description: 'An intelligent app that generates tailored resumes using Gemini AI, automatically pulling data from your GitHub profile and LinkedIn to create perfect applications.',
+    tags: ['Next.js', 'TypeScript', 'React', 'Gemini API', 'Apify'],
+    githubUrl: 'https://github.com/moeezs/just-apply',
+    icon: '/project-icons/justapply.png',
+    liveUrl: 'https://just-apply-eight.vercel.app/',
+    demoUrl: 'https://x.com/amoeezs/status/1926812616313155746',
   },
   {
-    id: 9,
-    title: 'Resume Analyzer',
-    description: 'A web application that analyzes your resume and provides detailed feedback on formatting, keyword optimization, and ATS compatibility for better job applications.',
-    tags: ['HTML', 'JavaScript', 'CSS'],
-    githubUrl: 'https://github.com/moeezs/Resume-Analyzer',
-    liveUrl: 'https://moeezs.github.io/Resume-Analyzer/',
-    icon: '/project-icons/resume.png'
+    id: 1,
+    title: 'Recipes RESTful API',
+    description: 'A RESTful API for accessing  recipes from AllRecipes. A web scraper that fetches recipes and provides endpoints for detailed recipe information.',
+    tags: ['Node.js', 'React', 'Vite', 'TypeScript', 'Express', 'Puppeteer'],
+    githubUrl: 'https://github.com/moeezs/recipes-api',
+    icon: '/project-icons/recipes-api.png',
+    liveUrl: 'https://recipes-api-production-6853.up.railway.app/',
+    demoUrl: 'https://x.com/amoeezs/status/1929320049879240944',
   },
   {
-    id: 10,
-    title: 'MedTrack',
-    description: 'A Python application that helps you track medications with visual calendar reminders. Never miss a dose with clear scheduling and notification features.',
-    tags: ['Python', 'Tkinter'],
-    githubUrl: 'https://github.com/moeezs/MedTrack',
-    icon: '/project-icons/medtrack.png'
+    id: 0,
+    title: 'Crave It',
+    description: 'An interactive cooking app that provides clean and easy-to-follow recipes with a simple interface. Set timers, listen to step instructions, and share recipes with friends.',
+    tags: ['Next.js', 'React', 'TypeScript'],
+    githubUrl: 'https://github.com/moeezs/craveit',
+    icon: '/project-icons/craveit.png',
+    liveUrl: 'https://craveit-zeta.vercel.app',
   }
 ]
 
@@ -121,8 +121,9 @@ const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
 };
 
 const ProjectsPage = () => {
-  const mobileProjectGroups = chunkArray(projects, 3);
-  const desktopProjectGroups = chunkArray(projects, 8);
+  const reversedProjects = [...projects].reverse()
+  const mobileProjectGroups = chunkArray(reversedProjects, 3);
+  const desktopProjectGroups = chunkArray(reversedProjects, 8);
 
   return (
     <div id='projects' className="py-4 px-4 md:px-6 mx-auto overflow-hidden">

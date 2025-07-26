@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { HomeIcon, UserIcon, FolderIcon, BriefcaseIcon, FileTextIcon, MailIcon, Instagram, Linkedin, Github, Mail } from "lucide-react"
+import { HomeIcon, UserIcon, FolderIcon, BriefcaseIcon, FileTextIcon, MailIcon, Instagram, Linkedin, Github, Mail, SparkleIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Link from 'next/link'
 // import { FaXTwitter } from "react-icons/fa6";
@@ -26,7 +26,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
             threshold: 0.4
         })
 
-        const sections = document.querySelectorAll('#home, #about, #projects, #experience, #resume, #contact')
+        const sections = document.querySelectorAll('#home, #about, #projects, #whats-new, #experience, #resume, #contact')
         sections.forEach(section => observer.observe(section))
 
         return () => {
@@ -36,10 +36,8 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
 
     const scrollToSection = (sectionId: string) => {
         if (scrollToSectionFunction) {
-            // Use the custom scroll function if provided (for mobile)
             scrollToSectionFunction(sectionId)
         } else {
-            // Default behavior for desktop
             const element = document.getElementById(sectionId)
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' })
@@ -113,6 +111,25 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
                             </div>
                             <Label htmlFor="projects-nav" className="font-normal cursor-pointer md:block hidden text-sm">
                                 Projects
+                            </Label>
+                        </div>
+
+                        {/* Whats New nav item */}
+                        <div className="flex items-center space-x-2 cursor-pointer"
+                            onClick={() => scrollToSection('whats-new')}>
+                            <div className={cn(
+                                "md:hidden flex items-center justify-center rounded-md w-8 h-8 transition-colors",
+                                activeSection === 'whats-new'
+                                    ? "bg-primary text-primary-foreground"
+                                    : "bg-muted hover:bg-muted/80"
+                            )}>
+                                <SparkleIcon size={18} />
+                            </div>
+                            <div className="relative md:block hidden">
+                                <RadioGroupItem value="whats-new" id="whats-new-nav" />
+                            </div>
+                            <Label htmlFor="whats-new-nav" className="font-normal cursor-pointer md:block hidden text-sm">
+                                What's New
                             </Label>
                         </div>
 
