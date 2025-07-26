@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, Code, Coffee, BookOpen, Laptop, Gamepad2, Brain, Target, Zap, ChevronRight } from 'lucide-react'
+import { Calendar, Eye, Code, Coffee, BookOpen, Laptop, Gamepad2, Brain, Target, Zap, ChevronRight, Section, Sparkle } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -32,7 +32,17 @@ const updateColors = {
 }
 
 const mockUpdates: Update[] = [
-  
+  {
+    id: 1,
+    title: "What's New Section Launches",
+    description: "Introducing the new 'What's New' section to keep you updated on my latest projects and learning journey.",
+    fullContent: "This section will feature weekly updates on what I've been learning, building, and discovering in my coding journey. Expect insights into new technologies, project highlights, and personal growth milestones. Above you can see an image with the page filled with mock data. That is my goal to atleast fill this page before school starts.",
+    date: "2023-10-01",
+    icon: Sparkle,
+    image: "/whats-new/whats-new.png",
+    rotation: -2,
+    colorClass: updateColors.blue
+  }
 
 ]
 
