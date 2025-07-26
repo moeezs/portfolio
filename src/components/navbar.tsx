@@ -215,7 +215,7 @@ const NavBar: React.FC<NavBarProps> = ({ scrollToSectionFunction }) => {
                     </Link>
                 </div>
                 <p className="text-sm text-muted-foreground pt-3">© 2025 Moeez</p>
-                <p className="text-sm text-muted-foreground pt-3">updated 22/07/2025</p>
+                <p className="text-sm text-muted-foreground pt-3">updated 26/07/2025</p>
             </div>
         </div>
     )
