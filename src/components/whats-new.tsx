@@ -58,7 +58,7 @@ const mockUpdates: Update[] = [
     id: 3,
     title: "SCATTER!!",
     description: "A new project showcasing making cool small apps every week.",
-    fullContent: "Scatter is a new initiative where I create and share small applications on a weekly basis. Each app will focus on a specific problem or idea, allowing me to experiment with different technologies and approaches. I already have 2 projects built and released in them, Reelax and Rainbolt. Check them out at scatter.moeezs.com. Stay tuned for more updates!",
+    fullContent: "<strong>Scatter</strong> is a new initiative where I create and share small applications on a weekly basis. Each app will focus on a specific problem or idea, allowing me to experiment with different technologies and approaches. I already have <em>2 projects</em> built and released in them, <strong>Reelax</strong> and <strong>Rainbolt</strong>. Check them out at <a href='https://scatter.moeezs.com' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>scatter.moeezs.com</a>. Stay tuned for more updates!",
     date: "2025-07-26",
     icon: GamepadIcon,
     image: "/whats-new/scatter.png",
@@ -69,12 +69,23 @@ const mockUpdates: Update[] = [
     id: 4,
     title: "React Native Beginning?!",
     description: "Starting to explore React Native for mobile app development.",
-    fullContent: "I've started learning React Native to expand my skill set into mobile app development. I began this journey by starting to watch a youtube crash course, however I quickly realized that I cannot learn properly by just watching videos. So I decided to build a start reading the documentation and all I did for today was tinker with the online playground and build a simple app that displays a list of items. I plan to continue learning and building small apps to solidify my understanding of React Native.",
+    fullContent: "I've started learning <strong>React Native</strong> to expand my skill set into mobile app development. I began this journey by starting to watch a YouTube crash course, however I quickly realized that I cannot learn properly by just watching videos. So I decided to start reading the official documentation and all I did for today was tinker with the <strong>online playground</strong> and build a simple app that displays a list of items. I plan to continue learning and building small apps to solidify my understanding of React Native.",
     date: "2025-07-27",
     icon: Phone,
     image: "/whats-new/react-native-first.png",
     rotation: -3,
     colorClass: updateColors.purple
+  },
+  {
+    id: 5,
+    title: "First App with React Native",
+    description: "Built my first app using React Native.",
+    fullContent: "I successfully built my first app using <strong>React Native</strong>! The app is a simple 3 tab application. First tab is just a home screen to show users who built the app, ME! The second tab is a simple game. I wanted to build this to use useState and variables in React Native. The third tab is a AI chat app that uses the Gemini API to chat with an AI. I used the <strong>Expo</strong> platform to build and run the app on my phone. I plan to continue building more apps to solidify my understanding of React Native. You can check out the video of the app in action on <a href='https://x.com/amoeezs/status/1950020171541688352' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>here</a> and view the code <a href='https://github.com/moeezs/first-expo-app' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>here</a>.",
+    date: "2025-07-28",
+    icon: Sparkle,
+    image: "/whats-new/first-app.png",
+    rotation: 2,
+    colorClass: updateColors.cyan
   }
 
 ]
@@ -246,8 +257,8 @@ function WhatsNew() {
                   </div>
                 </div>
 
-                <DialogDescription className="text-sm md:text-base leading-relaxed text-left pt-4">
-                  {selectedUpdate.fullContent}
+                <DialogDescription className="text-sm md:text-base leading-relaxed text-left pt-4 prose prose-sm max-w-none dark:prose-invert">
+                  <div dangerouslySetInnerHTML={{ __html: selectedUpdate.fullContent }} />
                 </DialogDescription>
               </DialogHeader>
             </div>
