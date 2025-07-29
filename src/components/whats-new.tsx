@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon } from 'lucide-react'
+import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon, Phone } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -51,7 +51,7 @@ const mockUpdates: Update[] = [
     date: "2025-07-26",
     icon: Volleyball,
     image: "/whats-new/world-cup.png",
-    rotation: 2,
+    rotation: 3,
     colorClass: updateColors.green
   },
   {
@@ -59,13 +59,23 @@ const mockUpdates: Update[] = [
     title: "SCATTER!!",
     description: "A new project showcasing making cool small apps every week.",
     fullContent: "Scatter is a new initiative where I create and share small applications on a weekly basis. Each app will focus on a specific problem or idea, allowing me to experiment with different technologies and approaches. I already have 2 projects built and released in them, Reelax and Rainbolt. Check them out at scatter.moeezs.com. Stay tuned for more updates!",
-    date: "2025-07-27",
+    date: "2025-07-26",
     icon: GamepadIcon,
     image: "/whats-new/scatter.png",
-    rotation: 2,
+    rotation: -1,
     colorClass: updateColors.orange
+  },
+  {
+    id: 4,
+    title: "React Native Beginning?!",
+    description: "Starting to explore React Native for mobile app development.",
+    fullContent: "I've started learning React Native to expand my skill set into mobile app development. I began this journey by starting to watch a youtube crash course, however I quickly realized that I cannot learn properly by just watching videos. So I decided to build a start reading the documentation and all I did for today was tinker with the online playground and build a simple app that displays a list of items. I plan to continue learning and building small apps to solidify my understanding of React Native.",
+    date: "2025-07-27",
+    icon: Phone,
+    image: "/whats-new/react-native-first.png",
+    rotation: -3,
+    colorClass: updateColors.purple
   }
-
 
 ]
 
@@ -75,8 +85,8 @@ function WhatsNew() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', { 
-      month: 'short', 
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
       day: 'numeric',
       year: 'numeric'
     })
@@ -107,7 +117,7 @@ function WhatsNew() {
     }
     return 5
   }
-  
+
   const maxUpdates = getMaxUpdatesForScreen()
   const reversedUpdates = [...mockUpdates].reverse()
   const mainGridUpdates = reversedUpdates.slice(0, maxUpdates)
@@ -127,18 +137,18 @@ function WhatsNew() {
           let hideClasses = ''
           if (index >= 5) hideClasses += ' hidden md:block'
           if (index >= 8) hideClasses += ' hidden lg:block'
-          
+
           return (
             <motion.div
               key={update.id}
               initial={{ opacity: 0, scale: 0.9, rotate: 0 }}
-              animate={{ 
-                opacity: 1, 
-                scale: 1, 
-                rotate: update.rotation 
+              animate={{
+                opacity: 1,
+                scale: 1,
+                rotate: update.rotation
               }}
-              whileHover={{ 
-                scale: 1.02, 
+              whileHover={{
+                scale: 1.02,
                 rotate: 0,
                 zIndex: 10,
                 transition: { duration: 0.2 }
@@ -157,9 +167,9 @@ function WhatsNew() {
                   <h3 className="font-semibold text-xs md:text-sm mb-1 overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{update.title}</h3>
                 </div>
               </div>
-              
+
               <p className="text-[10px] md:text-xs text-muted-foreground mb-2 md:mb-3 overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{update.description}</p>
-              
+
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1 text-[9px] md:text-xs text-muted-foreground">
                   <Calendar size={8} className="md:w-2.5 md:h-2.5" />
@@ -177,13 +187,13 @@ function WhatsNew() {
         {hasMoreUpdates && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: 0 }}
-            animate={{ 
-              opacity: 1, 
-              scale: 1, 
-              rotate: 1 
+            animate={{
+              opacity: 1,
+              scale: 1,
+              rotate: 1
             }}
-            whileHover={{ 
-              scale: 1.02, 
+            whileHover={{
+              scale: 1.02,
               rotate: 0,
               zIndex: 10,
               transition: { duration: 0.2 }
@@ -221,7 +231,7 @@ function WhatsNew() {
                   />
                 </div>
               )}
-              
+
               <DialogHeader>
                 <div className="flex items-start gap-3">
                   <div className={`p-3 rounded-lg ${selectedUpdate.colorClass} flex-shrink-0`}>
@@ -235,7 +245,7 @@ function WhatsNew() {
                     </div>
                   </div>
                 </div>
-                
+
                 <DialogDescription className="text-sm md:text-base leading-relaxed text-left pt-4">
                   {selectedUpdate.fullContent}
                 </DialogDescription>
