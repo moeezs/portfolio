@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon, Phone } from 'lucide-react'
+import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon, Phone, Plane } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -86,6 +86,28 @@ const mockUpdates: Update[] = [
     image: "/whats-new/first-app.png",
     rotation: 2,
     colorClass: updateColors.cyan
+  },
+  {
+    id: 6,
+    title: "Stickerly",
+    description: "My newest scatter project, Stickerly, is live!",
+    fullContent: "Stickerly is a fun app that allows you to take any image (preferable clipart) remove its background and convert it to a cute sticker for you to download. You can check it out at <a href='https://stickerly.moeezs.com' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>scatter.moeezs.com/stickerly</a>.",
+    date: "2025-07-30",
+    icon: Sparkle,
+    image: "/whats-new/stickerly.png",
+    rotation: -1,
+    colorClass: updateColors.rose
+  },
+  {
+    id: 7,
+    title: "McMaster Drone Website",
+    description: "I updated the McMaster Drone Team website with a new design and features.",
+    fullContent: "The McMaster Drone Team website has been revamped with a fresh design and new features to improve user experience. Check it out at <a href='https://macdrones.ca' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>mcmasterdrone.com</a>.",
+    date: "2025-08-01",
+    icon: Plane,
+    image: "/whats-new/macdrone1.png",
+    rotation: 1,
+    colorClass: updateColors.indigo
   }
 
 ]
