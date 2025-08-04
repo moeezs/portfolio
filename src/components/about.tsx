@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { 
-  CodeIcon, Coffee, Headphones, Laptop, BookOpen, 
+import {
+  CodeIcon, Coffee, Headphones, Laptop, BookOpen,
   GraduationCap, ChevronRight,
   Piano
 } from 'lucide-react'
@@ -76,12 +76,12 @@ const AboutPage = () => {
   return (
     <div id='about' className="py-4 md:py-6 max-w-5xl mx-auto px-4 overflow-hidden">
       <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-center">About Me</h2>
-    
+
       <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-6 mb-3 md:mb-8">
         <div className="w-full md:w-1/4 flex-shrink-0 flex justify-center flex-col">
           <div className="relative w-full aspect-square max-w-[180px] mx-auto md:mx-0 rounded-xl overflow-hidden bg-muted/30 border border-muted shadow-sm">
-            <Image 
-              src="/pfp.jpg" 
+            <Image
+              src="/pfp.jpg"
               alt="Moeez Shaikh"
               fill
               className="object-cover"
@@ -96,7 +96,7 @@ const AboutPage = () => {
             <span className="h-4 w-1 bg-primary rounded-full"></span>
             Fun Facts
           </h3>
-          
+
           <div className="h-full">
             <div className="flex flex-wrap bg-muted/30 rounded-t-lg p-1 md:p-2">
               {funFacts.map((fact, index) => (
@@ -105,8 +105,8 @@ const AboutPage = () => {
                   onClick={() => setActiveFact(index)}
                   className={cn(
                     "py-1.5 px-3 md:py-2 md:px-4 text-xs md:text-sm font-medium transition-all rounded-md flex items-center gap-1.5 my-0.5 mx-0.5",
-                    activeFact === index 
-                      ? "bg-background text-primary shadow-sm" 
+                    activeFact === index
+                      ? "bg-background text-primary shadow-sm"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted/70"
                   )}
                 >
@@ -115,10 +115,10 @@ const AboutPage = () => {
                 </button>
               ))}
             </div>
-            
+
             <div className="p-3 md:p-4 bg-background rounded-b-lg border-x border-b min-h-[90px] md:min-h-[110px] relative">
               <p className="text-xs md:text-sm text-muted-foreground pr-16">{funFacts[activeFact].description}</p>
-              
+
               {/* Emoji Container */}
               <div className="absolute top-3 right-4 flex flex-col items-center">
                 {/* Draggable Emoji */}
@@ -134,10 +134,10 @@ const AboutPage = () => {
                 >
                   {funFacts[activeFact].emoji}
                 </motion.div>
-                
+
                 {/* Static "Drag me!" text */}
-                <motion.span 
-                  {...dragTextAnimation} 
+                <motion.span
+                  {...dragTextAnimation}
                   className="text-[10px] md:text-xs text-primary font-medium mt-3 z-99"
                 >
                   Drag me!
@@ -147,13 +147,13 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="mb-3 md:mb-8">
         <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 flex items-center gap-2">
           <span className="h-4 w-1 bg-primary rounded-full"></span>
           Education
         </h3>
-        
+
         <div className="bg-card rounded-lg overflow-hidden shadow-sm">
           <div style={{ background: `linear-gradient(to right, ${mcMasterRed}, ${mcMasterRed}10)` }} className="p-3 md:p-4">
             <div className="flex items-center gap-2 md:gap-3">
@@ -166,7 +166,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="p-3 md:p-4">
             <div className="flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1 text-[10px] md:text-xs px-2 py-0.5 md:px-2.5 md:py-1 bg-muted/40 rounded-full">
@@ -177,18 +177,22 @@ const AboutPage = () => {
                 <ChevronRight size={10} className="md:h-3 md:w-3" style={{ color: mcMasterRed }} />
                 McMaster Drone and Aerial Club
               </span>
+              <span className="inline-flex items-center gap-1 text-[10px] md:text-xs px-2 py-0.5 md:px-2.5 md:py-1 bg-muted/40 rounded-full">
+                <ChevronRight size={10} className="md:h-3 md:w-3" style={{ color: mcMasterRed }} />
+                DeltaHacks Tecnicical Exec
+              </span>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div className="space-y-3 md:space-y-5">
         <div>
           <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 flex items-center gap-2">
             <span className="h-4 w-1 bg-primary rounded-full"></span>
             Languages and Technologies
           </h3>
-          
+
           <div className="bg-muted/30 rounded-lg p-1 md:p-2 w-full overflow-hidden">
             {/* Languages Marquee */}
             <Marquee className="py-1 md:py-1.5" pauseOnHover reverse>
@@ -207,9 +211,9 @@ const AboutPage = () => {
                 </div>
               ))}
             </Marquee>
-            
+
             <div className="w-full h-px bg-muted my-2 md:my-3"></div>
-            
+
             {/* Tech Stack Marquee */}
             <Marquee className="py-1 md:py-1.5" pauseOnHover>
               {techLogos.map((tech, index) => (
@@ -235,38 +239,38 @@ const AboutPage = () => {
 }
 
 const funFacts: FunFactType[] = [
-  { 
-    title: "Code Time", 
+  {
+    title: "Code Time",
     description: "I wrote my first line of code when I was 10, using Atom (my first code editor) to make a simple circle that followed my mouse. That sparked my love for programming.",
     icon: CodeIcon,
     emoji: "💻"
   },
-  { 
-    title: "Coffee Fan", 
+  {
+    title: "Coffee Fan",
     description: "I consume at least 3 cups of coffee daily while programming. My favorite is a double-shot espresso.",
     icon: Coffee,
     emoji: "☕"
   },
-  { 
-    title: "Music", 
+  {
+    title: "Music",
     description: "I have 20+ playlists for different coding moods & tasks. My favourite artists are Drake, Jeff Buckley, Radiohead, and Mac DeMarco.",
     icon: Headphones,
     emoji: "🎧"
   },
-  { 
-    title: "Reading", 
+  {
+    title: "Reading",
     description: "I absolutely love to read classic books. One recommendation I have for everyone is to read White Nights by Fyodor Dostoevsky once in their lives.",
     icon: Laptop,
     emoji: "📚"
   },
-  { 
-    title: "Learning", 
+  {
+    title: "Learning",
     description: "Currently diving deep into AI and machine learning concepts. I'm fascinated by these emerging technologies.",
     icon: BookOpen,
     emoji: "🤖"
   },
-  { 
-    title: "Piano", 
+  {
+    title: "Piano",
     description: "I learned to play the piano a year ago and can play a lot of my favorite songs. I'm still learning and improving.",
     icon: Piano,
     emoji: "🎹"
