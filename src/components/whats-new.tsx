@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon, Phone, Plane } from 'lucide-react'
+import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon, Phone, Plane, Code, PointerIcon, Disc, Sticker, AppleIcon } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -82,7 +82,7 @@ const mockUpdates: Update[] = [
     description: "Built my first app using React Native.",
     fullContent: "I successfully built my first app using <strong>React Native</strong>! The app is a simple 3 tab application. First tab is just a home screen to show users who built the app, ME! The second tab is a simple game. I wanted to build this to use useState and variables in React Native. The third tab is a AI chat app that uses the Gemini API to chat with an AI. I used the <strong>Expo</strong> platform to build and run the app on my phone. I plan to continue building more apps to solidify my understanding of React Native. You can check out the video of the app in action on <a href='https://x.com/amoeezs/status/1950020171541688352' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>here</a> and view the code <a href='https://github.com/moeezs/first-expo-app' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>here</a>.",
     date: "2025-07-28",
-    icon: Sparkle,
+    icon: AppleIcon,
     image: "/whats-new/first-app.png",
     rotation: 2,
     colorClass: updateColors.cyan
@@ -93,7 +93,7 @@ const mockUpdates: Update[] = [
     description: "My newest scatter project, Stickerly, is live!",
     fullContent: "Stickerly is a fun app that allows you to take any image (preferable clipart) remove its background and convert it to a cute sticker for you to download. You can check it out at <a href='https://scatter.moeezs.com/stickerly' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>scatter.moeezs.com/stickerly</a>.",
     date: "2025-07-30",
-    icon: Sparkle,
+    icon: Sticker,
     image: "/whats-new/stickerly.png",
     rotation: -1,
     colorClass: updateColors.rose
@@ -108,6 +108,39 @@ const mockUpdates: Update[] = [
     image: "/whats-new/macdrone1.png",
     rotation: 1,
     colorClass: updateColors.indigo
+  },
+  {
+    id: 8,
+    title: "Leetcode Grind",
+    description: "I have tasked most of this august to be a leetcode grind month. I will be solving 1 leetcode problem every day.",
+    fullContent: "I have tasked most of this august to be a leetcode grind month. I will be solving 1 leetcode problem every day. I'm currently learning about different patterns and how to apply them to solve problems. I will be following this algomaster's guide to leetcode patterns: <a href='https://www.algomaster.com/leetcode-patterns' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>algomaster.com/leetcode-patterns</a>. ",
+    date: "2025-08-02",
+    icon: Code,
+    image: "/whats-new/leetcode.png",
+    rotation: -2,
+    colorClass: updateColors.teal
+  },
+  {
+    id: 9,
+    title: "Vinylize",
+    description: "The newest scatter project, Vinylize, is live!",
+    fullContent: "A simple app that lets you listen to music the old fashioned way, by playing vinyl records. You can check it out at <a href='https://scatter.moeezs.com/vinylize' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>scatter.moeezs.com/vinylize</a>.",
+    date: "2025-08-06",
+    icon: Disc,
+    image: "/whats-new/vinylize.png",
+    rotation: -1,
+    colorClass: updateColors.blue
+  },
+  {
+    id: 10,
+    title: "Leetcode Two Pointers",
+    description: "I feel like I have a good understanding of the two pointers pattern now.",
+    fullContent: "After solving multiple problems using the two pointers pattern, I feel like I have a good understanding of it now. I will continue to practice it and apply it to more problems.",
+    date: "2025-08-07",
+    icon: PointerIcon,
+    image: "/whats-new/leetcodeprog1.png",
+    rotation: 2,
+    colorClass: updateColors.amber
   }
 
 ]
@@ -118,6 +151,7 @@ function WhatsNew() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
+    date.setDate(date.getDate() + 1)
     return date.toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
