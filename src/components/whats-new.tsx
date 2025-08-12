@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon, Phone, Plane, Code, PointerIcon, Disc, Sticker, AppleIcon } from 'lucide-react'
+import { Calendar, Eye, ChevronRight, Sparkle, Volleyball, GamepadIcon, Phone, Plane, Code, PointerIcon, Disc, Sticker, AppleIcon, TypeIcon } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from './ui/dialog'
 import Image from 'next/image'
 
@@ -141,6 +141,17 @@ const mockUpdates: Update[] = [
     image: "/whats-new/leetcodeprog1.png",
     rotation: 2,
     colorClass: updateColors.amber
+  },
+  {
+    id: 11,
+    title: "Leetcode Update",
+    description: "I have been grinding leetcode for the past week",
+    fullContent: "It genuinely feels not working on that many personal projects right now but it lowkey is a nice break. However, I've been following the neetcode roadmap and I have seen major improvement in my skills. I can still mostly do easy with a medium here and there so I really need to get back and start learning the patterns better and applying them. But yeah, hopefully this grind pays off!",
+    date: "2025-08-11",
+    icon: TypeIcon,
+    image: "/whats-new/leetcodeprog2.png",
+    rotation: -1,
+    colorClass: updateColors.green
   }
 
 ]
