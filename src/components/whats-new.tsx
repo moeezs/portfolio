@@ -158,12 +158,12 @@ const mockUpdates: Update[] = [
     title: "Azaadi",
     description: "New Scatter Project",
     fullContent: "Dedicated to the independance day of Pakistan on Aug 14th, this project aims to celebrate the heritage of Pakistan with fireworks. I have also added a few more countries like Canada and Japan to celebrate their independence days on the day of (or time travel). Check it out at <a href='https://scatter.moeezs.com/azaadi' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>scatter.moeezs.com/azaadi</a>.",
-    date: "2025-08-12",
+    date: "2025-08-14",
     icon: MoonIcon,
     image: "/whats-new/azaadi.png",
     rotation: 1,
     colorClass: updateColors.green
-  }
+  },
 
 ]
 
